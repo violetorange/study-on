@@ -1,3 +1,4 @@
 #index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+main_list:
+    path: /
+    controller: App\Controller\CourseController::index
