@@ -1,9 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Новый урок{% endblock %}
+{% block title %}Новый урок / {{ lesson.course.name }} / StudyOn{% endblock %}
 
 {% block body %}
-    <h1>Создание нового урока</h1>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand mb-0 h1" href="/">StudyOn</a>
+            </div>
+        </nav>
 
-    {{ include('lesson/_form.html.twig') }}
+        <h1>Создание нового урока</h1>
+
+        <p>Курс: <a class="text-decoration-none"
+                    href="{{ path('course_show', {'id': lesson.course.id}) }}">{{ lesson.course.name }}</a></p>
+
+        {{ include('lesson/_form.html.twig') }}
+    </div>
+
 {% endblock %}
