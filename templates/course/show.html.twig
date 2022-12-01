@@ -26,9 +26,9 @@
 
         <div class="d-inline-flex">
             <a class="btn btn-outline-dark" href="{{ path('course_index') }}">К списку курсов</a>
-            <a class="btn btn-outline-dark" href="{{ path('course_edit', {'id': course.id}) }}">Редактировать</a>
+            <a class="btn btn-outline-dark c_edit" href="{{ path('course_edit', {'id': course.id}) }}">Редактировать</a>
             {{ include('course/_delete_form.html.twig') }}
-            <a class="btn btn-outline-dark" href="{{ path('lesson_new', {'course_id': course.id}) }}">Добавить урок</a>
+            <a class="btn btn-outline-dark l_new" href="{{ path('lesson_new', {'course_id': course.id}) }}">Добавить урок</a>
         </div>
     </div>
 {% endblock %}

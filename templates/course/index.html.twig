@@ -24,8 +24,8 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ course.name }}</h5>
                             <p class="card-text">{{ course.description }}</p>
-                            <a class="text-decoration-none" href="{{ path('course_show', {'id': course.id}) }}"
-                               class="card-link">Пройти</a>
+                            <a class="card-link text-decoration-none"
+                               href="{{ path('course_show', {'id': course.id}) }}">Пройти</a>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
         <br>
         <hr>
 
-        <a class="btn btn-outline-dark" href="{{ path('course_new') }}">Новый курс</a>
+        <a class="btn btn-outline-dark c_new" href="{{ path('course_new') }}">Новый курс</a>
 
     </div>
 
